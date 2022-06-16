@@ -1,4 +1,3 @@
-"use strict";
 const credits = 23500;
 const pricePerDroid = 3000;
 
