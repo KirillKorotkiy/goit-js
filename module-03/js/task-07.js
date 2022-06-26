@@ -85,19 +85,19 @@ const account = {
    * определенного типа транзакции из всей истории транзакций
    */
   getTransactionTotal(type) {
+    let total =0;
     for(const transaction of this.transactions){
       if(transaction.type === type){
-        return transaction.amount;
+        total += transaction.amount;
       }
-    }
-
+    }return total;
   },
 }
 
 account.deposit(1500)
-
+account.deposit(1700)
 console.log(account.withdraw(1200))
 console.log(account.balance)
 console.log(account.transactions)
 console.log(account.getTransactionDetails(2))
-console.log(account.getTransactionTotal('withdraw'))
+console.log(account.getTransactionTotal(Transaction.DEPOSIT))
