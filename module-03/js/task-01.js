@@ -9,8 +9,8 @@ const user = {
 user.mood = 'happy';
 user.hobby = 'skydiving';
 user.premium = false;
-const newArray = Object.keys(user);
-console.log(newArray)
-for (const arr of newArray){
-  console.log(`${arr} - ${user[arr]}`)
+const keys = Object.keys(user);
+console.log(keys)
+for (const key of keys){
+  console.log(`${key} - ${user[key]}`)
 }
