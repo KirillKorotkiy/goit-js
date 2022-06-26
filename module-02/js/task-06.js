@@ -1,27 +1,45 @@
-let input;
-const numbers = [];
-let total = 0;
+
+ 
+
+// const atTheOldToad = {
+//   potions: [
+//     { name: "Speed potion", price: 460 },
+//     { name: "Dragon breath", price: 780 },
+//     { name: "Stone skin", price: 520 },
+//   ],
+
+//   // Change code below this line
+//   updatePotionName(oldName, newName) {
+//    const newArray =[];
+//    for (const key of this.potions){
+//     newArray.push(key.name);
+//    }
+//    console.log(newArray)
+//   const findNumber = newArray.indexOf(oldName);
+//   const keys = newArray.splice(findNumber, 1, newName)   
+
+//    console.log(keys)
+//    return keys
+//   }
+  
+//   // Change code above this line
+
+// }
+
+// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth')
 
 
-while (input !== null) {
-  input = prompt("Введите число");
-  const turnNumber = Number(input);
-  if (input === null) {
-    break;
-  } 
-  if(!Number.isNaN(turnNumber)){
-    numbers.push(turnNumber)}
-   else { 
-    alert('Было введено не число, попробуйте еще раз')
-}}
+
+const atTheOldToad = {
+  potions: ["Speed potion", "Dragon breath", "Stone skin"],
+  updatePotionName(oldName, newName) {
+    // Change code below this line
+  const findNumber = this.potions.indexOf(oldName);
+  const key = this.potions.splice(findNumber, 1, newName)
+  return key
+    // Change code above this line
+  },
+};
 
 
-
-if(numbers.length !==0){
-  for(let i =0; i<numbers.length; i+=1){
-    total +=numbers[i];
-  }
-}
-console.log(numbers)
-console.log(`Общая сумма чисел равна ${total}`)
-
+console.log(atTheOldToad.updatePotionName("Dragon breath", "Polymorth"))
