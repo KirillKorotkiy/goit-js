@@ -4,22 +4,19 @@ class StringBuilder{
     }
 
     get value(){
-        return this._value;
+        this._value;
     }
 
     append(str){
         this._value+=str;
-        return this._value;
     }
 
     prepend(str){
         this._value = str + this._value;
-        return this._value;
     }
 
     pad(str){
         this._value = str + this._value +str;
-        return this._value;
 
     }
 }

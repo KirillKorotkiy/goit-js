@@ -19,11 +19,11 @@ class Car {
      *  distance - общий киллометраж, изначально 0
      */
     constructor({speed, price, maxSpeed, isOn, distance}) {
-      this._speed=speed;
+      this._speed=speed || 0;
       this._price=price;
       this._maxSpeed=maxSpeed;
       this._isOn=isOn;
-      this._distance=0;
+      this._distance= distance || 0;
     }
   
     /*
@@ -43,8 +43,7 @@ class Car {
      * Записывает в свойство isOn значение true
      */
     turnOn() {
-      this._speed = 0;
-      return this._isOn = true;
+      this._isOn = true;
     }
       
     /*
@@ -83,7 +82,7 @@ class Car {
      * но только в том случае если машина заведена!
      */
     drive(hours) {
-      if( this._isOn === true){
+      if( this._isOn){
         this._distance += hours*this._speed;
       } 
     } 
