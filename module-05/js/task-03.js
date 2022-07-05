@@ -4,7 +4,7 @@ class Storage{
     }
 
     getItems(){
-        return this.items;
+        this.items;
     }
 
     addItem(item){
