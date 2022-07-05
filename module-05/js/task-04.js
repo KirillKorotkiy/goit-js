@@ -4,7 +4,7 @@ class StringBuilder{
     }
 
     get value(){
-        this._value;
+       return this._value;
     }
 
     append(str){
