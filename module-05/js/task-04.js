@@ -22,7 +22,7 @@ class StringBuilder{
 }
 
 
-
+console.log(StringBuilder)
 
 
 const builder = new StringBuilder('.');
