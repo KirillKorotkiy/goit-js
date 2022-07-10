@@ -3,9 +3,7 @@ import users from "./users.js";
 //-TASK 1
 
 const getUserNames = users => {
-    const names = users.flatMap(user => user.name);
-    return names
-  
+    return users.flatMap(user => user.name);;
     // твой код
   };
 
@@ -16,8 +14,7 @@ const getUserNames = users => {
   //-TASK 2
 
   const getUsersWithEyeColor = (users, color) => {
-    const eyesByColor = users.filter(user => user.eyeColor === color);
-    return eyesByColor; 
+    return  users.filter(user => user.eyeColor === color);
     // твой код
   };
   
@@ -26,10 +23,8 @@ const getUserNames = users => {
   //-TASK 3
 
   const getUsersWithGender = (users, gender) => {
-
-    const usersByGander = users.filter(user => user.gender === gender)
+    return users.filter(user => user.gender === gender)
     .flatMap(user => user.name);
-    return usersByGander;
     // твой код
   };
   
@@ -38,7 +33,6 @@ const getUserNames = users => {
 //-TASK 4
 
   const getInactiveUsers = users => {
-
     const inactiveUsers = users.filter(user => !user.isActive)
     return inactiveUsers;
     // твой код
@@ -60,7 +54,6 @@ console.log(getUserWithEmail(users, 'elmahead@omatom.com')); // {объект п
 //-TASK 6
 
 const getUsersWithAge = (users, min, max) => {
-
     const userByAge = users.filter(user => user.age >= min && user.age <= max)
     return userByAge;
 
