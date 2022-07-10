@@ -10,7 +10,7 @@ function getRandomHexColor() {
 
 
   btnToChangeColor.addEventListener('click', () =>{
-    bodyColor.style.cssText = `background-color: ${getRandomHexColor()}`
+    bodyColor.style.backgroundColor =  `${getRandomHexColor()}`
     spanToChangeColor.textContent = `${getRandomHexColor()}`
   })
 
